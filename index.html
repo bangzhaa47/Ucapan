@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Message for You</title>
+    <!-- Menggunakan font yang manis dan rapi -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #FDFBF7;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #4A3F35;
+        }
+        .card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 380px;
+            padding: 30px 20px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .sticker {
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        h1 {
+            font-family: 'Sacramento', cursive;
+            font-size: 32px;
+            color: #D9777F;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #6C5F5B;
+            margin-bottom: 25px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn {
+            background-color: #EEA29A;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(238, 162, 154, 0.4);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn:hover {
+            background-color: #E8998D;
+            transform: scale(1.05);
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Gambar Stiker (Menggunakan GIF Online) -->
+        <img id="sticker" class="sticker" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnFlMHZ1b3M3YTF0cnJ1ZXNqYmQyaDlpYzI0OHJycHllNmZydms1ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/MDJ9IbxxvDUQM/giphy.gif" alt="Sticker">
+        
+        <!-- Judul & Pesan -->
+        <h1 id="title">Halo... ✨</h1>
+        <p id="message">Ada pesan singkat yang ingin aku sampaikan ke kamu.</p>
+        
+        <!-- Tombol Lanjut -->
+        <button class="btn" onclick="nextStep()">Buka Pesan ❤️</button>
+    </div>
+
+    <script>
+        // Data tiap langkah (Stiker, Judul, Pesan, Teks Tombol)
+        const steps = [
+            {
+                sticker: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHI3OWYxbG51bmk1cnZzaXVsdHByYnY4ZXpsMmV6aHR1OGZtMHlyNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1dkpS5nZHsq4vq5/giphy.gif",
+                title: "Kesan Pertama...",
+                text: "Sejak awal kenal kamu, suasana terasa lebih tenang dan menyenangkan.",
+                button: "Lanjut ✨"
+            },
+            {
+                sticker: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3ZkNTdxMmw0dGUyNzNvaWl0YnA1NGVqOXBoY3k1dHNhMGkydDRoZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/LpDmM2w934628b37GE/giphy.gif",
+                title: "Satu Hal Lagi...",
+                text: "Terima kasih ya sudah hadir dan memberikan senyuman manis di hari-hariku.",
+                button: "Lanjut ❤️"
+            },
+            {
+                sticker: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnBsc3RtMTh2d3J2ZjhxMXpueGllazM2YmNveXg4NTh3cXJrd2EwMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/KztT2c4u8mYYUiMKdJ/giphy.gif",
+                title: "Untuk Kamu 🌸",
+                text: "Tetap jadi diri kamu yang seperti ini ya. Ketenangan kamu selalu punya arti tersendiri.",
+                button: "Selesai 😊"
+            }
+        ];
+
+        let currentStep = 0;
+
+        function nextStep() {
+            if (currentStep < steps.length) {
+                const data = steps[currentStep];
+                document.getElementById('sticker').src = data.sticker;
+                document.getElementById('title').innerText = data.title;
+                document.getElementById('message').innerText = data.text;
+                document.querySelector('.btn').innerText = data.button;
+                currentStep++;
+            } else {
+                // Tampilan saat pesan selesai
+                document.getElementById('title').innerText = "Terima Kasih! ✨";
+                document.getElementById('message').innerText = "Semoga harimu selalu menyenangkan!";
+                document.querySelector('.btn').style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
