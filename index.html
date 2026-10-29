@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+  <link href="https://feeldreams.github.io/heihbd/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+  
+  <title>Happy Anniversary for You</title>
+  <link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico">
+  <meta name="description" content="HTML Replit Coding">
+  
+  <!-- CSS Kustom untuk Foto & Video Otomatis Adaptif -->
+  <style>
+    .foto-akhir {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 20%; /* Mengatur fokus gambar agar pas di area wajah */
+      border: 3px solid #ff99bb;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      margin-bottom: 10px;
+    }
+    .video-kado {
+      width: 100%;
+      max-width: 300px;
+      max-height: 65vh;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin-bottom: 12px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      object-fit: contain;
+      background: #000;
+    }
+    #bq, #Tombol {
+      transition: opacity 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+	
+   <!-- Audio Latar Belakang -->
+   <audio src="https://bangzhaa47.github.io/Ucapan/angin.mp3" id="linkmp3" class="sembunyi"></audio>
+   
+   <div id="bodyblur">
+     <!-- Wallpaper Background -->
+     <img src="https://feeldreams.github.io/wp9.jpg" id="wallpaper"/><div id="beneranblur"></div>
+   </div>
+   
+   <div id='Content'>
+
+     <div id="kadoIn">
+       <!-- Tombol Surat / Kado -->
+       <img src="https://feeldreams.github.io/kadoin.png"/>
+     </div>
+     <p id="ket">Klik Kejutan Ini!</p>
+
+     <div class="kumpulanstiker">
+         <!-- Stiker untuk Konten -->
+         <img src="https://feeldreams.github.io/bunga.gif" id="fotostiker"/>
+         <img src="https://feeldreams.github.io/pusn.gif" id="fotostiker1"/>
+         <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotostiker2"/>
+         <img src="https://feeldreams.github.io/cilukba.gif" id="fotostiker3"/>
+         <img src="https://feeldreams.github.io/pandakuning.gif" id="fotostiker4"/>
+         <img src="https://feeldreams.github.io/emawh.gif" id="fotostiker5"/>
+         <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotostiker6"/>
+     </div>
+     
+     <p id="halo" class="halo"></p>
+     
+     <div><blockquote id='bq' data-text='㋡'>
+       <p id="kalimat">Aku Ada Sesuatu Spesial Nih buat Kamu 🤍</p>
+
+       <p id="pesan1">Klik 4 LOVE di Bawah dulu ya! 🥰</p>
+       <div id="kolombaru">
+         <li id="lv1">🤍</li>
+         <li id="lv2">🤍</li>
+         <li id="lv3">🤍</li>
+         <li id="lv4">🤍</li>
+       </div>
+
+       <p id="pesan2">Sabar sayang, dinikmati dulu prosesnya...</p>
+       
+       <!-- Daftar Pesan Ucapan Anniversary -->
+       <p id="pesan3">Enggak terasa ya waktu berjalan begitu cepat.. 🥺</p>
+       <p id="pesan4">Happy Anniversary, <br> 🥳 </p>
+       <p id="pesan5" class="gaya2">Terima kasih sudah bertahan sejauh ini bareng aku, melewati semua tawa, canda, dan suka duka bersama. 🫶</p>
+       <p id="pesan6" class="gaya2">Aku bersyukur banget punya kamu di hidupku. Semoga kita selalu bisa saling menguatkan dan menjaga perasaan ini. 💗</p>
+       <p id="pesan7" class="gaya2">Semoga hubungan kita makin langgeng<br>dan dipenuhi kebahagiaan selalu! 💫</p>
+
+       <p id="pesan8" class="gaya2">I Love You So Much ✨</p>
+       <p id="pesan9" class="gaya2">Tetap jadi rumah ternyaman buat aku yaa, hari ini, esok, dan selamanya..</p>
+       
+       <!-- Pesan Terakhir: Foto & Ucapan Utama -->
+       <p id="pesan10" class="gaya2">
+         <img src="https://bangzhaa47.github.io/Ucapan/foto1.jpg" class="foto-akhir"><br>
+         <b>Happy Anniversary Sayangku! 🥂❤️</b>
+       </p>
+
+       <!-- Tombol Lanjut di dalam kotak teks -->
+       <p id="opsL">Klik untuk Lanjut</p>
+     </blockquote></div>
+
+     <!-- Tombol Akhir -->
+     <div id="Tombol"><a id="By">&#128140; Lanjut</a></div>
+
+     <!-- Pesan Tambahan (Teks saat memilih Engga) -->
+     <p id="katatambahan" class="sembunyi">Gajadi deh soalnya kamu gemesin banget wleee 😜</p>
+     
+     <!-- Pesan Ditolak -->
+     <div id="pesanditolak">
+       <img id="stikerditolak" src="https://feeldreams.github.io/weee.gif"/>
+       <p id="kataditolak">Yaudah kalau gamau dilanjutin padahal ada kejutan 😜</p>
+     </div>
+
+   </div>
+
+<script>
+  const body = document.querySelector("body");
+  const swalst = Swal.mixin({timer: 2300, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageHeight: 90}); 
+  audio = new Audio('' + linkmp3.src);
+  audio.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+  }); 
+  ftganti=0; fungsi=0; fungsiAwal=0; deffotostiker=fotostiker.src; 
+  
+  function berjatuhan() {
+    const heart = document.createElement("div"); 
+    heart.className = "fas fa-snowflake"; 
+    heart.style.left = (Math.random() * 90)+"vw"; 
+    heart.style.animationDuration = (Math.random()*3)+2+"s"; 
+    body.appendChild(heart);
+  } 
+  
+  setInterval(function name(params) {
+    var heartArr = document.querySelectorAll(".fa-snowflake"); 
+    if (heartArr.length > 100) {heartArr[0].remove()}
+  }, 100);
+  
+  Content.style = "opacity:1;margin-top:16vh"; 
+  const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageHeight: 80}); 
+	
+  document.getElementById("kadoIn").onclick = function() {
+    if(fungsiAwal==0){
+      fungsiAwal=1;
+      kadoIn.style="transition:all .8s ease;transform:scale(10);opacity:0";
+      wallpaper.style="transform: scale(1.5);";
+      ket.style="display:none";
+      setTimeout(initengahan,300);
+      setTimeout(inipesan,500);
+    }
+  }
+  
+  // Fungsi Verifikasi Kata Kunci dengan Loading & Musik Berputar Saat Benar
+  async function inipesan(){
+    var { value: inputUser } = await swals.fire({
+           title: 'Panggilan Sayang Dulu 🔐', input: 'text',
+    });
+    
+    // Kata Kunci Rahasia
+    var kataKunciRahasia = "2016"; 
+    
+    if(inputUser && inputUser.trim().toLowerCase() === kataKunciRahasia){
+         // 1. Animasi Loading Pemeriksaan (Benar)
+         Swal.fire({
+           title: 'Memeriksa...',
+           text: 'Tunggu sebentar ya sayang...',
+           allowOutsideClick: false,
+           showConfirmButton: false,
+           timer: 1200,
+           timerProgressBar: true,
+           didOpen: () => {
+             Swal.showLoading();
+           }
+         });
+
+         await new Promise(resolve => setTimeout(resolve, 1200));
+
+         // 2. Pop-up Sukses Berhasil Masuk
+         await Swal.fire({
+           icon: 'success',
+           title: 'Akses Terbuka 🥰',
+           text: 'Password benar, silakan masuk ke hari spesial kita ✨',
+           timer: 1500,
+           showConfirmButton: false
+         });
+
+         // Musik mulai diputar di sini
+         audio.play();
+
+         window.nama = "Sayangku"; 
+         vketikhalo="Hai, Cantik ✨"; 
+         mulainama();
+    } else {
+         // 1. Animasi Loading Pemeriksaan (Salah)
+         Swal.fire({
+           title: 'Memeriksa...',
+           text: 'Tunggu sebentar ya...',
+           allowOutsideClick: false,
+           showConfirmButton: false,
+           timer: 1000,
+           timerProgressBar: true,
+           didOpen: () => {
+             Swal.showLoading();
+           }
+         });
+
+         await new Promise(resolve => setTimeout(resolve, 1000));
+
+         // 2. Pop-up Gagal / Error
+         await Swal.fire({
+           icon: 'error',
+           title: 'Waduh, Lupa?',
+           text: 'Password salah! Coba ingat-ingat lagi panggilan sayang kita ya 😜',
+           timer: 1500,
+           showConfirmButton: false
+         });
+
+         inipesan(); 
+    }
+  }
+
+  // Pengaturan Pertanyaan Akhir
+  var tanya = 'Mau Terus Bareng Aku Terus Kan? 🤍';
+  var opstanya = 'Ayo dijawab jujur 😆';
+  var tompositif = 'Mau Banget';
+  var tomnegatif = 'Engga';
+    
+  async function menuju(){
+    await swals.fire({
+      icon: 'success',
+      title: 'Terima Kasih! ✨',
+      text: 'Semoga kita terus bahagia bersama!',
+      timer: 2000,
+      showConfirmButton: false
+    });
+    window.location.reload();
+  }
+
+  // Skrip Otomatis untuk Mengatur Tombol Akhir & Pop-up Video Terakhir (Responsif Adaptif)
+  const observer = new MutationObserver((mutations) => {
+    const btn = document.getElementById("By");
+    if (btn && (btn.innerText.includes("Balas") || btn.innerHTML.includes("fa-envelope") || btn.innerText.includes("Selesai"))) {
+      btn.innerHTML = '<i class="fa-solid fa-arrow-right"></i> Lanjut';
+      btn.onclick = async function(e) {
+        e.preventDefault();
+        
+        // Pop-up Pesan Bagian Terakhir dengan Tombol "Mulai"
+        let hasil = await swals.fire({
+          title: 'Ada Kenangan Manis Buat Kita... 🥰',
+          text: 'Udah siap nonton video perjalanan kita?',
+          icon: 'info',
+          confirmButtonText: 'Mulai',
+          confirmButtonColor: '#ff4d88',
+          allowOutsideClick: false
+        });
+
+        if (hasil.isConfirmed) {
+          // 1. Musik Berhenti
+          audio.pause();
+          audio.currentTime = 0;
+
+          // 2. Pop-up Video Pendek Berputar Otomatis (Menyesuaikan Format Video)
+          await swals.fire({
+            html: `
+              <p style="font-weight: bold; margin-bottom: 10px; font-size: 16px;">Happy Anniversary, My Love ✨</p>
+              <video class="video-kado" autoplay controls playsinline>
+                <source src="https://bangzhaa47.github.io/Ucapan/berdua.mp4" type="video/mp4">
+                Browser kamu tidak mendukung pemutaran video.
+              </video>
+            `,
+            width: '90%',
+            customClass: {
+              popup: 'swal2-video-popup'
+            },
+            showConfirmButton: true,
+            confirmButtonText: 'Selesai ✨',
+            confirmButtonColor: '#ff4d88',
+            allowOutsideClick: false
+          });
+
+          // Refresh halaman setelah selesai
+          window.location.reload();
+        }
+      };
+    }
+
+    // Menyembunyikan kotak pesan (#bq) dan tombol (#Tombol) saat ada pop-up SweetAlert2 yang aktif
+    const swalContainer = document.querySelector(".swal2-container");
+    const bq = document.getElementById("bq");
+    const tombol = document.getElementById("Tombol");
+    
+    if (swalContainer) {
+      if (bq) {
+        bq.style.opacity = "0";
+        bq.style.pointerEvents = "none";
+      }
+      if (tombol) {
+        tombol.style.opacity = "0";
+        tombol.style.pointerEvents = "none";
+      }
+    } else {
+      if (bq) {
+        bq.style.opacity = "1";
+        bq.style.pointerEvents = "auto";
+      }
+      if (tombol) {
+        tombol.style.opacity = "1";
+        tombol.style.pointerEvents = "auto";
+      }
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+</script>
+<script src="https://feeldreams.github.io/heihbd/script.js"></script>
+</body>
+</html>
